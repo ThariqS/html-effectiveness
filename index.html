@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The unreasonable effectiveness of HTML — examples</title>
+<style>
+  :root {
+    --ivory: #FAF9F5;
+    --slate: #141413;
+    --clay: #D97757;
+    --g300: #D1CFC5;
+    --g500: #87867F;
+    --g700: #3D3D3A;
+    --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+    --sans: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ivory);
+    color: var(--slate);
+    font-family: var(--sans);
+    line-height: 1.5;
+  }
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  .intro {
+    font-size: 15px;
+    color: var(--g700);
+    margin: 0 0 40px;
+    max-width: 640px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+  }
+  a.card {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 18px 14px;
+    background: #FFFFFF;
+    border: 1px solid var(--g300);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+  }
+  a.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(20, 20, 19, 0.08);
+    border-color: var(--slate);
+  }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--g500);
+    margin-bottom: 6px;
+  }
+  .title {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--slate);
+    margin-bottom: 6px;
+  }
+  .desc {
+    font-size: 13px;
+    color: var(--g700);
+    line-height: 1.45;
+    margin-bottom: 14px;
+    flex: 1;
+  }
+  .file {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--g500);
+    border-top: 1px solid #F0EEE6;
+    padding-top: 10px;
+  }
+  a.card:hover .file { color: var(--clay); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>The unreasonable effectiveness of HTML — examples</h1>
+  <p class="intro">Twelve single-file pages an agent produced instead of a wall of text. Open any one in a browser; each is self-contained.</p>
+
+  <div class="grid">
+
+    <a class="card" href="01-exploration-code-approaches.html">
+      <div class="eyebrow">Exploration</div>
+      <div class="title">Three code approaches</div>
+      <div class="desc">Side-by-side comparison of three ways to solve the same problem, with trade-offs called out inline.</div>
+      <div class="file">01-exploration-code-approaches.html</div>
+    </a>
+
+    <a class="card" href="02-exploration-visual-designs.html">
+      <div class="eyebrow">Exploration</div>
+      <div class="title">Visual design directions</div>
+      <div class="desc">A handful of layout and palette options rendered as thumbnails so you can point at the one you want.</div>
+      <div class="file">02-exploration-visual-designs.html</div>
+    </a>
+
+    <a class="card" href="03-code-review-pr.html">
+      <div class="eyebrow">Code Review</div>
+      <div class="title">Annotated pull request</div>
+      <div class="desc">A diff rendered with margin notes, severity tags and jump links — easier to scan than scrolling a terminal.</div>
+      <div class="file">03-code-review-pr.html</div>
+    </a>
+
+    <a class="card" href="04-code-understanding.html">
+      <div class="eyebrow">Code Review</div>
+      <div class="title">Module map</div>
+      <div class="desc">An unfamiliar package drawn as boxes and arrows, with the hot path highlighted and entry points listed.</div>
+      <div class="file">04-code-understanding.html</div>
+    </a>
+
+    <a class="card" href="05-design-system.html">
+      <div class="eyebrow">Design</div>
+      <div class="title">Living design system</div>
+      <div class="desc">Colors, type scale and spacing tokens pulled straight from the repo and rendered as swatches.</div>
+      <div class="file">05-design-system.html</div>
+    </a>
+
+    <a class="card" href="06-component-variants.html">
+      <div class="eyebrow">Design</div>
+      <div class="title">Component variants</div>
+      <div class="desc">Every size, state and intent of one component laid out on a single contact sheet.</div>
+      <div class="file">06-component-variants.html</div>
+    </a>
+
+    <a class="card" href="07-prototype-animation.html">
+      <div class="eyebrow">Prototyping</div>
+      <div class="title">Animation sandbox</div>
+      <div class="desc">The transition in isolation with sliders for duration and easing, so you can tune it before wiring it in.</div>
+      <div class="file">07-prototype-animation.html</div>
+    </a>
+
+    <a class="card" href="08-prototype-interaction.html">
+      <div class="eyebrow">Prototyping</div>
+      <div class="title">Clickable flow</div>
+      <div class="desc">Four screens linked together — enough fidelity to feel whether the interaction is right.</div>
+      <div class="file">08-prototype-interaction.html</div>
+    </a>
+
+    <a class="card" href="09-slide-deck.html">
+      <div class="eyebrow">Decks</div>
+      <div class="title">Arrow-key slide deck</div>
+      <div class="desc">A short presentation as one HTML file. Left and right to navigate, no build step.</div>
+      <div class="file">09-slide-deck.html</div>
+    </a>
+
+    <a class="card" href="10-svg-illustrations.html">
+      <div class="eyebrow">Decks</div>
+      <div class="title">SVG figure sheet</div>
+      <div class="desc">The diagrams for a blog post, drawn inline so they can be tweaked and copied out one by one.</div>
+      <div class="file">10-svg-illustrations.html</div>
+    </a>
+
+    <a class="card" href="11-status-report.html">
+      <div class="eyebrow">Reports</div>
+      <div class="title">Weekly status</div>
+      <div class="desc">What shipped, what slipped, and a small chart — formatted for a quick skim on Monday morning.</div>
+      <div class="file">11-status-report.html</div>
+    </a>
+
+    <a class="card" href="12-incident-report.html">
+      <div class="eyebrow">Reports</div>
+      <div class="title">Incident timeline</div>
+      <div class="desc">A post-mortem with a minute-by-minute timeline, log excerpts and the follow-up checklist.</div>
+      <div class="file">12-incident-report.html</div>
+    </a>
+
+  </div>
+</div>
+</body>
+</html>
