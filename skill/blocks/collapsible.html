@@ -1,0 +1,23 @@
+<!-- BLOCK: collapsible (progressive-disclosure explainer)
+     USE WHEN: a research/learning doc or walkthrough where the reader scans headings
+     first and expands only what they need. Mark the first one [open]. The .where span
+     is optional (file:line or location). Pure HTML <details> — no JS. -->
+<section>
+  <div class="sec-head"><h2>How it works</h2></div>
+  <p class="sec-intro">Scan the steps; expand any for detail.</p>
+
+  <details open>
+    <summary>1 · Entry point <span class="where">apps/main-api/.../controller.ts:21</span></summary>
+    <div class="body"><p>What happens here and why.</p></div>
+  </details>
+
+  <details>
+    <summary>2 · Business logic <span class="where">libs/apis/business-logic/...:9</span></summary>
+    <div class="body"><p>What happens here and why.</p></div>
+  </details>
+
+  <details>
+    <summary>3 · Persistence <span class="where">libs/data/...:31</span></summary>
+    <div class="body"><p>What happens here and why.</p></div>
+  </details>
+</section>

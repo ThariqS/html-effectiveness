@@ -1,0 +1,39 @@
+<!-- BLOCK: timeline (phases / milestones)
+     USE WHEN: showing ordered phases of an implementation plan or roadmap.
+     Each milestone has a label (when), a state dot (add class "done"), a heading,
+     a short description, and optional tags (files/areas touched). -->
+<section>
+  <div class="sec-head"><h2>Plan</h2></div>
+  <p class="sec-intro">Sequenced phases. Each phase is independently reviewable.</p>
+  <div class="milestones">
+    <div class="milestone">
+      <div class="when">Phase 1</div>
+      <div class="dot-col"><span class="dot done"></span><span class="line"></span></div>
+      <div class="body">
+        <h3>Data layer</h3>
+        <p>What this phase delivers and why it comes first.</p>
+        <div class="tags"><span class="tag">libs/data</span><span class="tag">migration</span></div>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div class="when">Phase 2</div>
+      <div class="dot-col"><span class="dot"></span><span class="line"></span></div>
+      <div class="body">
+        <h3>Service + endpoint</h3>
+        <p>Next increment, building on phase 1.</p>
+        <div class="tags"><span class="tag">main-api</span></div>
+      </div>
+    </div>
+
+    <div class="milestone">
+      <div class="when">Phase 3</div>
+      <div class="dot-col"><span class="dot"></span><span class="line"></span></div>
+      <div class="body">
+        <h3>UI</h3>
+        <p>Final increment.</p>
+        <div class="tags"><span class="tag">apps/web</span></div>
+      </div>
+    </div>
+  </div>
+</section>
