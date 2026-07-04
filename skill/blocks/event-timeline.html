@@ -1,0 +1,23 @@
+<!-- BLOCK: event-timeline
+     USE WHEN: a chronological log of what happened at specific times — incident
+     post-mortems, debugging sessions, deploy timelines. Dot variants: impact, mitigated. -->
+<section>
+  <div class="sec-head"><h2>Timeline</h2></div>
+  <div class="timeline">
+    <div class="tl-entry">
+      <span class="tl-dot"></span>
+      <div class="tl-time">09:14</div>
+      <div class="tl-body"><strong>First signal.</strong> What was observed.</div>
+    </div>
+    <div class="tl-entry">
+      <span class="tl-dot impact"></span>
+      <div class="tl-time">09:21</div>
+      <div class="tl-body"><strong>Impact.</strong> What broke and for whom.</div>
+    </div>
+    <div class="tl-entry">
+      <span class="tl-dot mitigated"></span>
+      <div class="tl-time">09:47</div>
+      <div class="tl-body"><strong>Mitigated.</strong> What restored service.</div>
+    </div>
+  </div>
+</section>

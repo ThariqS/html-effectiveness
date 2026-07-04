@@ -1,0 +1,29 @@
+<!-- BLOCK: table (risk / decision / comparison grid)
+     USE WHEN: structured rows of comparable items — risks, options, requirements.
+     Adjust grid-template-columns inline if you need a different column count/ratio.
+     Severity chips: sev low | med | high. -->
+<section>
+  <div class="sec-head"><h2>Risks</h2></div>
+  <div class="grid">
+    <div class="row">
+      <div class="cell head">Risk</div>
+      <div class="cell head">Severity</div>
+      <div class="cell head">Mitigation</div>
+    </div>
+    <div class="row">
+      <div class="cell">Migration locks a large collection</div>
+      <div class="cell"><span class="sev high">High</span></div>
+      <div class="cell">Batch in chunks; run off-peak.</div>
+    </div>
+    <div class="row">
+      <div class="cell">Backfill misses edge records</div>
+      <div class="cell"><span class="sev med">Med</span></div>
+      <div class="cell">Idempotent re-run + count assertion.</div>
+    </div>
+    <div class="row">
+      <div class="cell">Copy needs translation keys</div>
+      <div class="cell"><span class="sev low">Low</span></div>
+      <div class="cell">Add keys in same PR.</div>
+    </div>
+  </div>
+</section>

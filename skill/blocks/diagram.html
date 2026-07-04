@@ -1,0 +1,39 @@
+<!-- BLOCK: diagram (inline SVG flow / architecture)
+     USE WHEN: a data-flow, sequence, or dependency picture says more than prose.
+     Inline SVG only (no external images). Keep it simple: boxes + arrows + mono labels.
+     SVG presentation attributes don't support CSS vars — use the palette hex values
+     directly (see base-shell.html :root). Add a <p class="caption"> below. -->
+<section>
+  <div class="sec-head"><h2>Data flow</h2></div>
+  <div class="diagram">
+    <svg viewBox="0 0 760 120" width="100%" role="img" aria-label="Client to API to database flow">
+      <!-- boxes -->
+      <g>
+        <rect x="10" y="40" width="150" height="44" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" />
+        <text x="85" y="67" text-anchor="middle" font-size="13" fill="#141413">Web client</text>
+        <rect x="305" y="40" width="150" height="44" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" />
+        <text x="380" y="67" text-anchor="middle" font-size="13" fill="#141413">main-api</text>
+        <rect x="600" y="40" width="150" height="44" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" />
+        <text x="675" y="67" text-anchor="middle" font-size="13" fill="#141413">Mongo</text>
+      </g>
+      <!-- arrows -->
+      <g stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrow)">
+        <line x1="160" y1="62" x2="305" y2="62" />
+        <line x1="455" y1="62" x2="600" y2="62" />
+      </g>
+      <defs>
+        <marker
+          id="arrow"
+          viewBox="0 0 10 10"
+          refX="9"
+          refY="5"
+          markerWidth="7"
+          markerHeight="7"
+          orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" fill="#D97757" />
+        </marker>
+      </defs>
+    </svg>
+    <p class="caption">Request path: validated DTO in → repository query → mapped DTO out.</p>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<!-- BLOCK: code-grid (side-by-side approaches / before-after)
+     USE WHEN: comparing two options, or before/after of the same code. Two panels;
+     drop to one column on narrow screens automatically. Highlight spans: kw, str, cm, fn.
+     Escape <, >, & inside <pre> as &lt; &gt; &amp;. -->
+<section>
+  <div class="sec-head"><h2>Approaches</h2></div>
+  <p class="sec-intro">Two options, side by side. Trade-offs called out below each.</p>
+  <div class="code-grid">
+    <div class="code-block">
+      <div class="file-label">Option A — repository method</div>
+      <div class="code">
+        <pre><span class="cm">// extend the repository</span>
+<span class="kw">async</span> <span class="fn">findActiveByOrg</span>(orgId) {
+  <span class="kw">return</span> <span class="kw">this</span>.model.find({ active: <span class="kw">true</span> });
+}</pre>
+      </div>
+      <p class="sec-intro">Pro: layered, reusable. Con: more boilerplate.</p>
+    </div>
+
+    <div class="code-block">
+      <div class="file-label">Option B — inline query</div>
+      <div class="code">
+        <pre><span class="cm">// query in the service</span>
+<span class="kw">const</span> rows = <span class="kw">await</span> Model.<span class="fn">find</span>({ active: <span class="kw">true</span> });</pre>
+      </div>
+      <p class="sec-intro">Pro: fewer files. Con: violates layering — avoid.</p>
+    </div>
+  </div>
+</section>
